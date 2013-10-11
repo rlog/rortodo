@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://ruby.taobao.org/'
 ruby '1.9.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -6,11 +6,17 @@ gem 'rails', '4.0.0'
 
 group :development do
   gem 'sqlite3', '1.3.8'
+  gem 'rspec-rails', '2.13.1'
 end
 
 group :production do
   gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
+end
+
+group :test do
+  gem 'selenium-webdriver', '2.35.1'
+  gem 'capybara', '2.1.0'
 end
 
 # Use SCSS for stylesheets
@@ -37,6 +43,10 @@ gem 'jbuilder', '1.0.2'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', '0.3.20', require: false
+end
+
+group :production do
+  gem 'pg', '0.15.1'
 end
 
 # Use ActiveModel has_secure_password
